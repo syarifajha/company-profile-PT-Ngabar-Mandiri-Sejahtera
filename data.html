@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>PT. NGABAR MANDIRI SEJAHTERA</title>
+    <!-- MDB icon -->
+    <link rel="icon" href="img/logo.png" type="image/x-icon" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <!-- Google Fonts Roboto -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
+    />
+    <!-- MDB -->
+    <link rel="stylesheet" href="css/mdb.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  </head>
+  <body>
+
+    <!-- Start your project here-->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top bg-light shift">
+      <div class="container">
+        <a class="navbar-brand me-2" href="#">
+          <img src="img/logo.png" height="60">
+        </a>
+
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarButtonsExample"
+        aria-controls="navbarButtonsExample"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarButtonsExample">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <span style="font-family: auto;"><b>PT. NGABAR MANDIRI SEJAHTERA</b></span>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+             <li class="nav-item">
+              <a href="index.html" style="font-family: auto;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="data.html" style="font-family: auto;">Data</a>
+            </li>
+            <li class="nav-item">
+              <a href="data.html" style="font-family: auto;">Unit</a>
+            </li>          
+            <li class="nav-item">
+              <a href="login.html" style="font-family: auto;">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-8">
+        <div>
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+      <div class="col-4">
+        <div>
+          <canvas id="myChart1"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  const labels = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [0, 10, 5, 2, 20, 30, 45],
+    }]
+  };
+
+  const config = {
+    type: 'line',
+    data: data,
+    options: {}
+  };
+
+  var myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>
+
+<script>
+  const data1 = {
+    labels: [
+    'Red',
+    'Blue',
+    'Yellow'
+    ],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [300, 50, 100],
+      backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)'
+      ],
+      hoverOffset: 4
+    }]
+  };
+
+  const config1 = {
+    type: 'doughnut',
+    data: data1,
+  };
+
+  var myChart1 = new Chart(
+    document.getElementById('myChart1'),
+    config1
+  );
+</script>
+
+
+
+
+  <!-- End your project here-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript"></script>
+  </body>
+</html>
